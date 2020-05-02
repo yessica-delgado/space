@@ -1,4 +1,6 @@
 class VenuesController < ApplicationController
+  skip_before_filter :authenticate_user!, :only => [:index, :show]
+
   def new
     @venue = Venue.new
   end
