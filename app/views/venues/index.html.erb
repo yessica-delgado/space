@@ -2,6 +2,7 @@
   <% @venues.each do |venue| %>
     <li><%= venue.name %></li>
     <li><%= venue.address %></li>
-
+    <li> <%= link_to 'View listing', venue_path(venue) %></li>
+    <br>
   <% end %>
 </ul>
