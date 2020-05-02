@@ -1,0 +1,20 @@
+#card {
+  margin: 50px;
+  background: white;                         /* White background */
+  padding: 30px;                             /* Internal space */
+  border-radius: 10px;                        /* Small radius */
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);    /* Light shadow */
+}
+
+#name {
+  text-align: center;
+}
+
+#address {
+  color: rgb(180, 180, 180);
+  text-decoration: underline;
+}
+
+#booking-button {
+  margin: 50px;
+}

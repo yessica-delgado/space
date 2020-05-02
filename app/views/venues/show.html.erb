@@ -1,3 +1,15 @@
-<h2><%= @venue.name %></h2>
-<p><%= @venue.description %></p>
-<p><%= @venue.address %></p>
+
+<div id="card">
+  <div id="name">
+    <h2><%= @venue.name %></h2>
+  </div>
+  <div id="description">
+    <p><%= @venue.description %></p>
+  </div>
+  <div id="address">
+    <p><%= @venue.address %></p>
+  </div>
+</div>
+
+
+<div id= booking-button> <button type="button" class="btn btn-outline-secondary">Request booking</button> </div>
