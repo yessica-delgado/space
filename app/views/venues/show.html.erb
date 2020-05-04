@@ -1,15 +1,21 @@
 
 <div id="card">
   <div id="name">
-    <h2><%= @venue.name %></h2>
+    <h1><%= @venue.name %></h1>
   </div>
-  <div id="description">
-    <p><%= @venue.description %></p>
-  </div>
-  <div id="address">
+   <div id="address">
     <p><%= @venue.address %></p>
   </div>
-</div>
+  <div id= listing-button> <button type="button" class="btn btn-outline-secondary">PHOTOS</button> </div>
+  <div id= listing-button> <button type="button" class="btn btn-outline-secondary">MAP LOCATION</button> </div>
+
+  <div id="description">
+    <h6>DESCRIPTION</h6>
+    <p> <%= 'Accomodates :' @venue.capacity 'guests' %> </p>
+    <p><%= @venue.description %></p>
+  </div>
+  <h6>AMENITIES</h6>
+ </div>
 
 
-<div id= booking-button> <button type="button" class="btn btn-outline-secondary">Request booking</button> </div>
+<div id= listing-button> <button type="button" class="btn btn-outline-secondary">REQUEST BOOKING</button> </div>

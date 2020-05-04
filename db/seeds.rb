@@ -3,14 +3,15 @@
 #
 puts "Cleaning database..."
 Venue.destroy_all
+User.destroy_all
 puts 'database is clean'
 
 puts 'Creating venues'
 50.times do |number|
-  user = User.create(email:"#{number}@gmail.com", password:"123456789")
+  user = User.create!(email:"#{number}@gmail.com", password:"123456789")
   venue = Venue.create!(
     name: Faker::Nation.capital_city,
-    address:Faker::Address.street_address,
+    address:Faker::Address.full_address,
     user:user
 )
   puts "venue #{venue.id} is created"
