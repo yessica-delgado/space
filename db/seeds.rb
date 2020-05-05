@@ -3,6 +3,7 @@
 #
 puts "Cleaning database..."
 Venue.destroy_all
+User.destroy_all
 puts 'database is clean'
 
 puts 'Creating venues'
