@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2020_05_05_005142) do
-=======
 ActiveRecord::Schema.define(version: 2020_05_06_014313) do
->>>>>>> 812bafa4fa890d1b1f35a0d458fc77526e0c93aa
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,10 +57,7 @@ ActiveRecord::Schema.define(version: 2020_05_06_014313) do
     t.datetime "updated_at", precision: 6, null: false
     t.float "latitude"
     t.float "longitude"
-<<<<<<< HEAD
-=======
     t.integer "capacity"
->>>>>>> 812bafa4fa890d1b1f35a0d458fc77526e0c93aa
     t.index ["user_id"], name: "index_venues_on_user_id"
   end
 
