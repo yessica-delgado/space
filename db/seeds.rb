@@ -12,8 +12,10 @@ puts 'Creating venues'
   venue = Venue.create!(
     name: Faker::Nation.capital_city,
     address:Faker::Address.full_address,
+    capacity: rand(1..500),
     user:user
 )
+  #hacer attach al venue que ya se creo con codigo seed del lecture
   puts "venue #{venue.id} is created"
 end
 
