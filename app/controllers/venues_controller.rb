@@ -2,7 +2,14 @@ class VenuesController < ApplicationController
   skip_before_action :authenticate_user!, :only => [:index, :show]
 
   def index
-    @venues = Venue.all
+    @venues = Venue.geocoded # returns flats with coordinates
+
+    @markers = @venues.map do |venue|
+      {
+        lat: venue.latitude,
+        lng: venue.longitude
+      }
+    end
   end
 
   def new
@@ -20,6 +27,7 @@ class VenuesController < ApplicationController
   end
 
   def show
+
     @venue = Venue.find(params[:id])
   end
   private
