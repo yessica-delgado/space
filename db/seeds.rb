@@ -13,7 +13,7 @@ addresses = ["208 Columbus St, Hicksville, OH, 43526", "200 Robbins Ln, Jericho,
 ]
 puts 'Creating venues'
 50.times do |number|
-  user = User.create(email:"#{number}@gmail.com", password:"123456789")
+  user = User.create!(email:"#{number}@gmail.com", password:"123456789")
   venue = Venue.create!(
     name: Faker::Restaurant.name,
     description: Faker::Restaurant.description,
@@ -21,6 +21,7 @@ puts 'Creating venues'
     capacity: rand(1..500),
     user:user
 )
+  #hacer attach al venue que ya se creo con codigo seed del lecture
   puts "venue #{venue.id} is created"
 end
 
