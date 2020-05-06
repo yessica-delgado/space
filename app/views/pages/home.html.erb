@@ -6,17 +6,11 @@
   </div>
 </div>
 
-
 <div class="cards" href="/venues">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.picsum.photos/id/1031/5446/3063.jpg)">
-    Corporate
-  </div>
+ <% @venues.each do |venue| %>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.picsum.photos/id/1040/4496/3000.jpg)">
-    High Class
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.picsum.photos/id/158/4836/3224.jpg)">
-    Concerts
-  </div>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.picsum.photos/id/1031/5446/3063.jpg)">
+      <%= venue.name %>
+    </div>
+  <% end %>
 </div>
