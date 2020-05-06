@@ -1,3 +1,74 @@
 // Import page-specific CSS files here.
 @import "home";
-@import "show"
+@import "show";
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Bitter', serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.listing-header {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #6a707a;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 400;
+  margin: 20px 20px 20px 20px;
+  padding-left: 110px;
+}
+
+.listings-list {
+  display: block;
+  border-radius: 30px;
+  flex-basis: 50%;
+}
+
+
+.card-listing {
+  width: 300px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(230,230,230);
+
+}
+
+.card-listing > img {
+  height: 200px;
+  width: 98%;
+  object-fit: cover;
+  display: flex;
+}
+
+.card-listing-infos h2 {
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.card-listing-infos p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+  text-align: center;
+}
+
+.map {
+
+}
+
+
