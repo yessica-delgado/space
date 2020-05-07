@@ -1,0 +1,8 @@
+<br/><br/>
+<h3>Review <%= @venue.name %></h3>
+<br/><br/>
+<%= simple_form_for [ @venue, @review ] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating, collection: 0..5 %>
+  <%= f.submit "Submit review", class: "btn btn-primary" %>
+<% end %>

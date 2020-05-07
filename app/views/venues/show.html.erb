@@ -21,5 +21,23 @@
       <h6>AMENITIES</h6>
  </div>
 
-
 <div id= listing-button> <button type="button" class="btn btn-outline-secondary">REQUEST BOOKING</button> </div>
+
+ <div class="list-group">
+        <% @venue.reviews.each do |review| %>
+          <li class="list-group-item">
+            <small>
+              <% count = 0 %>
+              <% 5.times do %>
+                <% if review.rating > count %>
+                  <i class="fas fa-star"></i>
+                <% else %>
+                  <i class="far fa-star"></i>
+                <% end %>
+                <% count += 1 %>
+              <% end %>
+            </small>
+            <p><%= review.content %></p>
+          </li>
+        <% end %>
+      </div>
