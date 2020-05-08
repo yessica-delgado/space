@@ -1,10 +1,11 @@
 
-<div>
+<div class="map mx-5">
   <% if @venue.photo.attached? %>
-        <%= cl_image_tag @venue.photo.key, height: 300, width: 400, crop: :fill %>
+        <%= cl_image_tag @venue.photo.key, height: 300, width: 1000 %>
       <% end %>
 </div>
-<div id="card">
+
+<div class="container margin-top-negative" id="card">
   <div class="row">
     <div class="col-8">
       <div class="venue-show-card">
@@ -27,10 +28,7 @@
       <div id= listing-button> <button type="button" class="btn btn-outline-secondary">PHOTOS</button> </div>
       </div>
     </div>
-  </div>
- </div>
 
-<<<<<<< HEAD
 <div class="col-4">
   <div class="venue-show-card">
   <h5>Book this place!</h5>
@@ -47,7 +45,6 @@
           <input type="submit" value="Book" class="btn btn-warning mt-2" style="width: 100%">
         </form>
   </div>
-</div>
 
  <div class="venue-show-card">
         <h3>Details</h3>
@@ -72,8 +69,9 @@
             <i class="fa fa-envelope-square fa-2x"></i>
           </div>
         </div>
-=======
-<div id= listing-button> <button type="button" class="btn btn-outline-secondary">REQUEST BOOKING</button> </div>
+     </div>
+  </div>
+  </div>
 
  <div class="list-group">
         <% @reviews.each do |review| %>
@@ -92,5 +90,5 @@
             <p><%= review.content %></p>
           </li>
         <% end %>
->>>>>>> 64df708e29121557bf9dbefedda3ad14fb9e6971
       </div>
+    </div>
