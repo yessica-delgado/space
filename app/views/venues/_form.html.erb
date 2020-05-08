@@ -1,10 +1,16 @@
+<div class="create-form" >
+
 <%= simple_form_for(@venue) do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
   <%= f.input :description %>
    <%= f.input :capacity %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
+  <%= f.input :photo, as: :file%>
+
+  <div class="create-btn" >
+    <%= f.submit class: "btn btn-primary"%>
+  </div>
 <% end %>
 
+</div>
 

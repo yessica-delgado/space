@@ -1,0 +1,22 @@
+.container-devise {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+
+}
+
+.log-in {
+  display: flex;
+}
+.sign-up {
+  display: flex;
+  margin-top: 10px;
+  text-align: center;
+  justify-content: center;
+}
+
+.forgot-pw {
+  display: flex;
+}
