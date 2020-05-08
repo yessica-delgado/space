@@ -19,8 +19,15 @@ puts 'Creating venues'
     description: Faker::Restaurant.description,
     address: addresses.sample ,
     capacity: rand(1..500),
-    user:user
-)
+    user:user)
+    5.times do |review|
+      review = Review.create!(
+        venue: venue,
+        content: Faker::Quote.famous_last_words,
+        rating: rand(1..5) )
+    end
+
+
   #hacer attach al venue que ya se creo con codigo seed del lecture
   puts "venue #{venue.id} is created"
 end
@@ -30,3 +37,5 @@ puts "Finished!"
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+

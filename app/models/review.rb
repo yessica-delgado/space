@@ -1,5 +1,5 @@
 class Review < ApplicationRecord
-  belongs_to :venues
+  belongs_to :venue
   validates :content, presence: true
 
 end
