@@ -28,6 +28,9 @@ class VenuesController < ApplicationController
   end
 
   def show
+    @venue = Venue.find(params[:id])
+    @reviews = Review.where(venues_id: params[:id])
+
   end
 
   def edit
