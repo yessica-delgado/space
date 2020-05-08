@@ -30,6 +30,7 @@
   </div>
  </div>
 
+<<<<<<< HEAD
 <div class="col-4">
   <div class="venue-show-card">
   <h5>Book this place!</h5>
@@ -71,4 +72,25 @@
             <i class="fa fa-envelope-square fa-2x"></i>
           </div>
         </div>
+=======
+<div id= listing-button> <button type="button" class="btn btn-outline-secondary">REQUEST BOOKING</button> </div>
+
+ <div class="list-group">
+        <% @reviews.each do |review| %>
+          <li class="list-group-item">
+            <small>
+              <% count = 0 %>
+              <% 5.times do %>
+                <% if review.rating > count %>
+                  <i class="fas fa-star"></i>
+                <% else %>
+                  <i class="far fa-star"></i>
+                <% end %>
+                <% count += 1 %>
+              <% end %>
+            </small>
+            <p><%= review.content %></p>
+          </li>
+        <% end %>
+>>>>>>> 64df708e29121557bf9dbefedda3ad14fb9e6971
       </div>
