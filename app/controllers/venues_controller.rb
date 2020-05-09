@@ -33,7 +33,7 @@ class VenuesController < ApplicationController
 
   def show
     @venue = Venue.find(params[:id])
-
+    @booking = Booking.new
     @reviews = Review.where(venue_id: params[:id])
 
   end
