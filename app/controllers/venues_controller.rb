@@ -4,6 +4,10 @@ class VenuesController < ApplicationController
 
   def index
     @venues = Venue.geocoded # returns flats with coordinates
+    if params[:query].present?
+    @venues = @venues.search_by_venue(params[:query])
+    end
+
 
     @markers = @venues.map do |venue|
       {
