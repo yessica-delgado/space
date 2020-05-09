@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
    def create
     @review = Review.new(review_params)
     @venue = Venue.find(params[:venue_id])
-    @review.venue = @rvenue
+    @review.venue = @venue
     if @review.save
       redirect_to venue_path(@venue)
     else

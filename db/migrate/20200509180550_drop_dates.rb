@@ -1,0 +1,6 @@
+class DropDates < ActiveRecord::Migration[6.0]
+  def change
+    remove_column :bookings, :dates
+    add_column :bookings, :date, :date
+  end
+end
