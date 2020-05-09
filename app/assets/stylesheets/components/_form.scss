@@ -7,11 +7,15 @@
 }
 
 .form-inputs {
-  display: inline-block;
+    align-items: center;
 }
 
 h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.btn-primary {
+  text-color: white;
 }
