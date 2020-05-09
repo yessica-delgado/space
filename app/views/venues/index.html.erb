@@ -27,7 +27,7 @@
                 <p> <%= venue.address %> </p>
                 <p> Capacity : <%= venue.capacity %> </p>
                  <br /><br />
-                <h2 class="card-listing-link"><%= link_to 'View listing', venue_path(venue) %>
+                <h2 class="card-listing-link"><%= link_to 'View Venue', venue_path(venue) %>
                 <%= link_to 'Edit', edit_venue_path(venue), class: 'ml-3 text-warning' %>
                 <%= link_to "Remove", venue_path(venue),
                   method: :delete,
@@ -40,3 +40,6 @@
       <% end %>
   </div>
 </body>
+
+
+

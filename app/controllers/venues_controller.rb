@@ -13,6 +13,10 @@ class VenuesController < ApplicationController
     end
   end
 
+  #def search
+  #@venues = Venue.includes(params[:name])
+  #end
+
   def new
     @venue = Venue.new
   end
@@ -29,6 +33,7 @@ class VenuesController < ApplicationController
 
   def show
     @venue = Venue.find(params[:id])
+
     @reviews = Review.where(venue_id: params[:id])
 
   end
