@@ -1,3 +1,17 @@
+
+  <div class="search-bar">
+    <%= form_tag venues_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a venue"
+    %>
+    <div class="search-btn">
+      <%= submit_tag "Search", class: "btn btn-success mx-2 text-white" %>
+      <% end %>
+    </div>
+  </div>
+
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
 </head>
@@ -28,12 +42,15 @@
                 <p> Capacity : <%= venue.capacity %> </p>
                  <br /><br />
                 <h2 class="card-listing-link"><%= link_to 'View Venue', venue_path(venue) %>
+                  <% if policy(venue).edit? %>
                 <%= link_to 'Edit', edit_venue_path(venue), class: 'ml-3 text-warning' %>
                 <%= link_to "Remove", venue_path(venue),
                   method: :delete,
                   data: { confirm: "Are you sure?" },
                   class: 'ml-3 text-danger'
-              %></h2>
+              %>
+                <% end %>
+              </h2>
 
               </div>
           </div>

@@ -32,6 +32,8 @@ gem 'devise'
 # gem 'image_processing', '~> 1.2'
 gem 'faker'
 
+gem 'pg_search', '~> 2.3.0'
+
 gem 'gravtastic'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
