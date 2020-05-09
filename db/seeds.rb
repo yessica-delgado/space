@@ -4,6 +4,7 @@
 puts "Cleaning database..."
 Venue.destroy_all
 User.destroy_all
+Booking.destroy_all
 puts 'database is clean'
 
 addresses = ["208 Columbus St, Hicksville, OH, 43526", "200 Robbins Ln, Jericho, NY, 11753", "47 Revolutionary Rd, Ossining, NY, 10562",
@@ -20,6 +21,7 @@ puts 'Creating venues'
     description: Faker::Restaurant.description,
     address: addresses.sample ,
     capacity: rand(1..500),
+    price: rand(200..2000)
     user:user)
     5.times do |review|
       review = Review.create!(

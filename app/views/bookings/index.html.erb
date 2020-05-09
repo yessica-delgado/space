@@ -1,0 +1,19 @@
+<head>
+  <link rel="stylesheet" href="_booking.scss">
+</head>
+
+<% @bookings.each do |booking| %>
+</br> </br>
+<div class="card-product">
+    <% venue = booking.venue %>
+      <% if venue.photo.attached? %>
+        <%= cl_image_tag  venue.photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
+  <div class="card-product-infos">
+    <h2> <%= venue.name %></h2>
+    <p> <%= booking.price %> </p>
+    <%= link_to "View listing", venue_path(venue) %>
+  </div>
+</div>
+<% end %>
+
