@@ -21,6 +21,7 @@ puts 'Creating venues'
     description: Faker::Restaurant.description,
     address: addresses.sample ,
     capacity: rand(1..500),
+    price: rand(200..2000)
     user:user)
     5.times do |review|
       review = Review.create!(
