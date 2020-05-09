@@ -41,6 +41,9 @@ class VenuesController < ApplicationController
   def show
     @booking = Booking.new
     @reviews = Review.where(venue_id: params[:id])
+    @markers = [{  lat: @venue.latitude, lng: @venue.longitude }]
+
+
   end
 
   def edit
