@@ -28,12 +28,15 @@
                 <p> Capacity : <%= venue.capacity %> </p>
                  <br /><br />
                 <h2 class="card-listing-link"><%= link_to 'View Venue', venue_path(venue) %>
+                  <% if policy(venue).edit? %>
                 <%= link_to 'Edit', edit_venue_path(venue), class: 'ml-3 text-warning' %>
                 <%= link_to "Remove", venue_path(venue),
                   method: :delete,
                   data: { confirm: "Are you sure?" },
                   class: 'ml-3 text-danger'
-              %></h2>
+              %>
+                <% end %>
+              </h2>
 
               </div>
           </div>
