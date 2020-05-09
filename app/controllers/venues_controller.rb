@@ -14,6 +14,7 @@ class VenuesController < ApplicationController
         lat: venue.latitude,
         lng: venue.longitude
       }
+      @venues = policy_scope(@venues)
     end
   end
 
@@ -23,11 +24,13 @@ class VenuesController < ApplicationController
 
   def new
     @venue = Venue.new
+    authorize @venue
   end
 
   def create
     @venue = Venue.new(venue_params)
     @venue.user = current_user
+    authorize @venue
     if @venue.save
       redirect_to venue_path(@venue)
     else
@@ -36,10 +39,8 @@ class VenuesController < ApplicationController
   end
 
   def show
-    @venue = Venue.find(params[:id])
     @booking = Booking.new
     @reviews = Review.where(venue_id: params[:id])
-
   end
 
   def edit
@@ -59,6 +60,7 @@ class VenuesController < ApplicationController
 
   def set_venue
     @venue = Venue.find(params[:id])
+    authorize @venue
   end
 
   def venue_params
